@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import "./Dictionary.css";
 import axios from "axios";
+import Results from "./Results";
 
+//
 // dictionary component with state called keyword
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
+  // use this Hook to store the def and update the state when we get the def fro a diferent word
+  let [results, setResults] = useState("");
 
   function handleResponse(response) {
-    console.log(response);
+    // console.log(response.data[0].meanings[0].definitions);
+    setResults(response.data[0]);
   }
 
   // it will alert stored keyword when searched
@@ -15,6 +20,7 @@ export default function Dictionary() {
     event.preventDefault();
     //
     // API
+    // doc: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -36,6 +42,7 @@ export default function Dictionary() {
           placeholder="search away"
         />
       </form>
+      <Results results={results} />
     </div>
   );
 }
