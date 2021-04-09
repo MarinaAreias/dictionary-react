@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 import "./Dictionary.css";
+import axios from "axios";
 
 // dictionary component with state called keyword
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
 
+  function handleResponse(response) {
+    console.log(response);
+  }
+
   // it will alert stored keyword when searched
   function search(event) {
     event.preventDefault();
-    alert(`you searched for ${keyword}`);
+    //
+    // API
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
+    axios.get(apiUrl).then(handleResponse);
   }
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
