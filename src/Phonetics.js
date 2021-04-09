@@ -6,11 +6,11 @@ export default function Phonetics(props) {
   if (props.phonetics) {
     return (
       <div className="phonetics">
+        {/* MAYBE USE HTML5 API to play audio  */}
         <a href={props.phonetics.audio} target="_black">
           LISTEN
         </a>
-        <br></br>
-        {props.phonetics.text}
+        <span className="text">{props.phonetics.text}</span>
       </div>
     );
   } else {

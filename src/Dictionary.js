@@ -30,18 +30,18 @@ export default function Dictionary() {
 
   return (
     <div className="dictionary">
-      <header>
-        <h1>This is a Dictionary</h1>
-      </header>
       {/* eventListener so when it gets submited it will call a fucntion search */}
-      <form onSubmit={search}>
-        <input
-          type="search"
-          onChange={handleKeywordChange}
-          autoFocus={true}
-          placeholder="search away"
-        />
-      </form>
+      <section>
+        <h1>What word do you want to look up?</h1>
+        <form onSubmit={search}>
+          <input
+            type="search"
+            onChange={handleKeywordChange}
+            autoFocus={true}
+            placeholder="search away..."
+          />
+        </form>
+      </section>
       <Results results={results} />
     </div>
   );
