@@ -10,6 +10,7 @@ export default function Results(props) {
       <div className="results">
         <section>
           <h2>{props.results.word}</h2>
+
           {/* add PHONETICS and sound */}
           {props.results.phonetics.map(function (phonetic, index) {
             return (
