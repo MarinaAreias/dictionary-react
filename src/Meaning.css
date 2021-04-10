@@ -6,7 +6,8 @@
 
 .meaning .example {
   font-size: 15px;
-  color: #70757a;
+  color: #ff4081;
   font-style: italic;
   margin-top: 10px;
+  font-weight: bold;
 }

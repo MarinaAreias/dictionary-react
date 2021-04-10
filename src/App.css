@@ -1,10 +1,10 @@
-body {
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+header ul li {
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  margin-bottom: 3em;
 }
 
-header {
-  display: inline;
-}
 a {
   color: #61dafb;
 }
@@ -16,4 +16,10 @@ a {
 }
 .app .header {
   margin: 30px 0;
+}
+
+footer {
+  margin-top: 3em;
+  font-size: 16px;
+  text-decoration: underline;
 }

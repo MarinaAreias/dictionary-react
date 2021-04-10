@@ -14,8 +14,7 @@
 }
 
 .phonetics a:hover {
-  background: red;
-  color: white;
+  background: #ffff00;
 }
 
 .phonetics .text {

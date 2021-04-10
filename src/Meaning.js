@@ -16,7 +16,7 @@ export default function Meaning(props) {
               <em>{definition.example}</em>
             </div>
 
-            {/* because not everyword has synonyms */}
+            {/* because not every word has synonyms */}
             <Synonyms synonyms={definition.synonyms} />
           </div>
         );
