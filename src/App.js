@@ -26,7 +26,7 @@ export default function App(props) {
             <header className="header text-center">
               <ul>
                 <li>
-                  <h1>Your Dictionary</h1>
+                  <h1>Dictionary</h1>
                 </li>
                 <li className="ms-5">
                   <Switch onChange={handleDarkMode} value={darkMode} />
@@ -36,7 +36,16 @@ export default function App(props) {
             <main>
               <Dictionary />
             </main>
-            <footer className="text-center">Created by Marina Areias</footer>
+            <footer className="text-center">
+              Created by Marina Areias <br />
+              <a
+                href="https://marinaareias.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                marinaareias.com
+              </a>
+            </footer>
           </div>
         </div>
       </Paper>
